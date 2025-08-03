@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #cce5ff;
+}
+
+#darkModeToggle {
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #e9f2ff;
+}
+
+.dark-mode #hero {
+  background: #1f1f1f;
+}
+
+.btn {
+  margin-top: 1.5rem;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.dark-mode h2 {
+  color: #66b2ff;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+}
+
+.project {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.dark-mode .project {
+  background: #1a1a1a;
+  border-color: #444;
+}
+
+.project a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f0f0f0;
+  color: #666;
+  margin-top: 3rem;
+}
+
+.dark-mode footer {
+  background: #1a1a1a;
+  color: #999;
+}

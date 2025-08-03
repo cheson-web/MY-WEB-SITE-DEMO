@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CheSon Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>CheSon</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="darkModeToggle">🌙</button>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Hello, I'm CheSon</h2>
+    <p>A Web Designer & Frontend Developer</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm currently studying Web Design & Development. I build responsive websites using HTML, CSS, JS, and Firebase. I love creating beautiful and functional web experiences.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Firebase</li>
+      <li>Responsive Design</li>
+    </ul>
+    <canvas id="skillChart" width="400" height="250"></canvas>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A personal portfolio built with HTML, CSS, and hosted on GitHub Pages.</p>
+      <a href="https://cheson99.github.io/portfolio" target="_blank">View Project</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:cheson99@gmail.com">cheson99@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/cheson99" target="_blank">cheson99</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 CheSon. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Chart.js setup
+    const ctx = document.getElementById('skillChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'Responsive Design'],
+        datasets: [{
+          label: 'Skill Level (%)',
+          data: [95, 90, 80, 75, 85],
+          backgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        scales: {
+          y: { beginAtZero: true, max: 100 }
+        }
+      }
+    });
+
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.onclick = () => {
+      document.body.classList.toggle('dark-mode');
+    };
+  </script>
+</body>
+</html>
